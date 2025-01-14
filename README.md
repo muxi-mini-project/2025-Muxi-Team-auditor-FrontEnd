@@ -15,7 +15,7 @@
 
 ## 开发
 
-```
+```json
   "scripts": {
     "dev": "vite", // 启动开发服务器
     "build": "tsc -b && vite build", // 打包项目
