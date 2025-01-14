@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button';
 import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
+import { Toggle } from '@/components/ui/Toggle';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <StatusCheckbox variant="done"></StatusCheckbox>
       <StatusCheckbox variant="pending"></StatusCheckbox>
       <StatusCheckbox variant="reject"></StatusCheckbox>
+      <Toggle></Toggle>
     </div>
   );
 }
