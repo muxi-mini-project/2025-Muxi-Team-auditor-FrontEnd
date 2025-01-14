@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button';
 import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
+import { TagCheckbox } from '@/components/ui/TagCheckbox';
 import { Toggle } from '@/components/ui/Toggle';
 
 export default function Page() {
@@ -18,6 +19,7 @@ export default function Page() {
       <StatusCheckbox variant="pending"></StatusCheckbox>
       <StatusCheckbox variant="reject"></StatusCheckbox>
       <Toggle></Toggle>
+      <TagCheckbox>Tag</TagCheckbox>
     </div>
   );
 }
