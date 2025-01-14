@@ -20,6 +20,8 @@ const buttonVariants = cva(
           'bg-[#F29E26] text-[#FFF8ED] shadow h-12 px-4 py-2 w-28 rounded-md text-md font-semibold',
         cancel:
           'bg-[#FFEECF] text-foreground shadow h-12 px-4 py-2 w-28 rounded-md text-md font-semibold',
+        pagination:
+          'bg-[#FFEECF] hover:bg-[#FFE1B1] active:bg-[#FFD596] text-[#AF6600] shadow h-10 px-4 py-2 w-36 rounded-xl',
       },
     },
     defaultVariants: {
