@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/Button';
+import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
 
 export default function Page() {
   return (
@@ -10,6 +11,9 @@ export default function Page() {
       <Button variant="confirm">CONFIRM</Button>
       <Button variant="complete">COMPLETE</Button>
       <Button variant="cancel">CANCEL</Button>
+      <StatusCheckbox variant="done"></StatusCheckbox>
+      <StatusCheckbox variant="pending"></StatusCheckbox>
+      <StatusCheckbox variant="reject"></StatusCheckbox>
     </div>
   );
 }
