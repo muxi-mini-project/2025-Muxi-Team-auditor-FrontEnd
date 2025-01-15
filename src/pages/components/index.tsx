@@ -3,6 +3,7 @@ import { Checkbox } from '@/components/ui/Checkbox';
 import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
 import { TagCheckbox } from '@/components/ui/TagCheckbox';
 import { Toggle } from '@/components/ui/Toggle';
+import { TestPagination } from './TestPagination';
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
       <Toggle></Toggle>
       <TagCheckbox>Tag</TagCheckbox>
       <Checkbox></Checkbox>
+      <TestPagination></TestPagination>
     </div>
   );
 }
