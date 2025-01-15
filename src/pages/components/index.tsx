@@ -4,6 +4,7 @@ import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
 import { TagCheckbox } from '@/components/ui/TagCheckbox';
 import { Toggle } from '@/components/ui/Toggle';
 import { TestPagination } from './TestPagination';
+import { ImageButton } from '@/components/ui/ImageButton';
 
 export default function Page() {
   return (
@@ -25,6 +26,8 @@ export default function Page() {
       <TagCheckbox>Tag</TagCheckbox>
       <Checkbox></Checkbox>
       <TestPagination></TestPagination>
+      <ImageButton direction="prev"></ImageButton>
+      <ImageButton direction="next"></ImageButton>
     </div>
   );
 }
