@@ -17,6 +17,7 @@ export default function Page() {
       <Button variant="cancel">CANCEL</Button>
       <Button variant="pagination">◀ PREVIOUS</Button>
       <Button variant="pagination">NEXT ▶</Button>
+      <Button variant="ai">AI终审</Button>
       <StatusCheckbox variant="done"></StatusCheckbox>
       <StatusCheckbox variant="pending"></StatusCheckbox>
       <StatusCheckbox variant="reject"></StatusCheckbox>

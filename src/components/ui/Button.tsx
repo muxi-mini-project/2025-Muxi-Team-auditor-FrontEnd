@@ -22,6 +22,7 @@ const buttonVariants = cva(
           'bg-[#FFEECF] text-foreground shadow h-12 px-4 py-2 w-28 rounded-md text-md font-semibold',
         pagination:
           'bg-[#FFEECF] hover:bg-[#FFE1B1] active:bg-[#FFD596] text-[#AF6600] shadow h-10 px-4 py-2 w-36 rounded-xl',
+        ai: 'bg-[#F9C640] hover:bg-[#F8BD20] active:bg-[#F7B508] text-white shadow h-10 px-4 py-2 w-36 rounded-xl',
       },
     },
     defaultVariants: {
