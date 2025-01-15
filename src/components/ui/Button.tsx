@@ -23,6 +23,9 @@ const buttonVariants = cva(
         pagination:
           'bg-[#FFEECF] hover:bg-[#FFE1B1] active:bg-[#FFD596] text-[#AF6600] shadow h-8 px-4 py-2 w-32 rounded-xl',
         ai: 'bg-[#F9C640] hover:bg-[#F8BD20] active:bg-[#F7B508] text-white shadow h-8 px-4 py-2 w-32 rounded-xl',
+        outline:
+          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
       },
     },
     defaultVariants: {

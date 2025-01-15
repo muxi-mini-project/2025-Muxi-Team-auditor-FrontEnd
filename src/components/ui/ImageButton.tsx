@@ -1,6 +1,6 @@
 import { cn } from '@/utils/style';
 import * as React from 'react';
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 export interface ImageButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

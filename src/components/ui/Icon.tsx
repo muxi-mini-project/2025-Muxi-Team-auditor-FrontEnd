@@ -5,6 +5,7 @@ import Cross from '@/assets/cross.svg?react';
 import More from '@/assets/more.svg?react';
 import ChevronLeft from '@/assets/chevron-left.svg?react';
 import ChevronRight from '@/assets/chevron-right.svg?react';
+import * as React from 'react';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   name:
@@ -13,20 +14,23 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
     | 'cross'
     | 'more'
     | 'chevron-left'
-    | 'chevron-right';
+    | 'chevron-right'
+    | string;
 }
 
-export default function Icon(props: IconProps) {
-  const { name, ...svgProps } = props;
+const Icon = React.forwardRef<SVGSVGElement, IconProps>(
+  ({ name, ...svgProps }, ref) => {
+    const icons: Record<IconProps['name'], ReactElement> = {
+      check: <Check {...svgProps} ref={ref}></Check>,
+      circle: <Circle {...svgProps} ref={ref}></Circle>,
+      cross: <Cross {...svgProps} ref={ref}></Cross>,
+      more: <More {...svgProps} ref={ref}></More>,
+      'chevron-left': <ChevronLeft {...svgProps} ref={ref}></ChevronLeft>,
+      'chevron-right': <ChevronRight {...svgProps} ref={ref}></ChevronRight>,
+    };
 
-  const icons: Record<IconProps['name'], ReactElement> = {
-    check: <Check {...svgProps}></Check>,
-    circle: <Circle {...svgProps}></Circle>,
-    cross: <Cross {...svgProps}></Cross>,
-    more: <More {...svgProps}></More>,
-    'chevron-left': <ChevronLeft {...svgProps}></ChevronLeft>,
-    'chevron-right': <ChevronRight {...svgProps}></ChevronRight>,
-  };
+    return icons[name];
+  }
+);
 
-  return icons[name];
-}
+export { Icon };

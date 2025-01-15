@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { cn } from '@/utils/style';
 import { cva, VariantProps } from 'class-variance-authority';
-import Icon from './Icon';
+import { Icon } from './Icon';
 // import { ButtonProps, buttonVariants } from '@/components/ui/button';
 
 const buttonVariants = cva(
