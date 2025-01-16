@@ -5,9 +5,13 @@ import { TagCheckbox } from '@/components/ui/TagCheckbox';
 import { Toggle } from '@/components/ui/Toggle';
 import { TestPagination } from './TestPagination';
 import { ImageButton } from '@/components/ui/ImageButton';
+import { LargeToggle, SmallToggle } from '@/components/ui/CrazyToggle';
+// import { useState } from 'react';
 // import { Calendar } from '@/components/ui/Calendar';
 
 export default function Page() {
+  // const [checked, setChecked] = useState(false);
+
   return (
     <div className="flex flex-wrap gap-4 m-4">
       <Button>DEFAULT</Button>
@@ -30,6 +34,11 @@ export default function Page() {
       <ImageButton direction="prev"></ImageButton>
       <ImageButton direction="next"></ImageButton>
       {/* <Calendar mode="multiple"></Calendar> */}
+      {/* <LargeToggle checked={checked} onCheckedChange={(c) => setChecked(c)}>
+        {checked ? 'ON' : 'OFF'}
+      </LargeToggle> */}
+      <LargeToggle></LargeToggle>
+      <SmallToggle></SmallToggle>
     </div>
   );
 }
