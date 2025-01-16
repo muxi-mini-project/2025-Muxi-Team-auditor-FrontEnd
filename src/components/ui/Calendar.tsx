@@ -20,6 +20,7 @@ function Calendar({
       showOutsideDays={showOutsideDays}
       className={cn('p-3 bg-[#FFF8ED] transition-all', className)}
       classNames={{
+        // TODO: sort all the classes and improve animation
         month: 'space-y-4',
         caption: 'flex justify-center pt-1 pb-2 relative items-center',
         caption_label: 'text-sm font-semibold',

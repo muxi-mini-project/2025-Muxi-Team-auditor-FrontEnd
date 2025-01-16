@@ -11,7 +11,7 @@ export function TestCalendar() {
   );
 
   return (
-    <div className="flex justify-center items-center h-full w-screen">
+    <div className="m-4">
       <Calendar
         mode="range"
         selected={date}
@@ -20,4 +20,4 @@ export function TestCalendar() {
       />
     </div>
   );
-};
+}

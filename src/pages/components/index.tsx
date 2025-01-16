@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
-import { StatusCheckbox } from '@/components/ui/StatusCheckbox';
-import { TagCheckbox } from '@/components/ui/TagCheckbox';
+import { StatusCheckbox } from '@/components/StatusCheckbox';
+import { TagCheckbox } from '@/components/TagCheckbox';
 import { Toggle } from '@/components/ui/Toggle';
-import { ImageButton } from '@/components/ui/ImageButton';
-import { LargeToggle, SmallToggle } from '@/components/ui/CrazyToggle';
+import { ImageButton } from '@/components/ImageButton';
+import { LargeToggle, SmallToggle } from '@/components/CrazyToggle';
 
 import { TestPagination } from './TestPagination';
 import { TestCalendar } from './TestCalendar';
