@@ -1,15 +1,16 @@
-import { Button } from '@/components/ui/Button';
-import { Link } from 'react-router-dom';
+import { SidebarProvider, SidebarTrigger } from '@/components/Sidebar';
+import { AppSidebar } from './sidebar';
 
 export default function Page() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-background">
-        Hello World!
-      </h1>
-      <Link to="/components">
-        <Button>Components</Button>
-      </Link>
+      <SidebarProvider className="bg-[#FAF9F8]">
+        <AppSidebar></AppSidebar>
+        <main className="w-full">
+          <SidebarTrigger></SidebarTrigger>
+          Main
+        </main>
+      </SidebarProvider>
     </>
   );
 }
