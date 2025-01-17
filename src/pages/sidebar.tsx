@@ -35,7 +35,8 @@ ProjectItem.displayName = 'ProjectItem';
 export function AppSidebar() {
   return (
     <Sidebar className="bg-[#ffffff]">
-      <SidebarHeader className="h-16">
+      <SidebarHeader className="h-16 flex flex-row items-center justify-center">
+        <img src="/favicon.png" alt="logo" className="w-8 h-8" />
         <span className="text-lg font-bold">MUXI AUDITOR</span>
       </SidebarHeader>
       <SidebarContent>
