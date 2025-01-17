@@ -5,7 +5,6 @@ import { cva } from 'class-variance-authority';
 
 import { cn } from '@/utils/style';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
 import { Separator } from '@/components/ui/Separator';
 import { TooltipProvider } from '@/components/ui/Tooltip';
 import { Icon } from './ui/Icon';
@@ -264,24 +263,6 @@ const SidebarInset = React.forwardRef<
 });
 SidebarInset.displayName = 'SidebarInset';
 
-const SidebarInput = React.forwardRef<
-  React.ElementRef<typeof Input>,
-  React.ComponentProps<typeof Input>
->(({ className, ...props }, ref) => {
-  return (
-    <Input
-      ref={ref}
-      data-sidebar="input"
-      className={cn(
-        'h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring',
-        className
-      )}
-      {...props}
-    />
-  );
-});
-SidebarInput.displayName = 'SidebarInput';
-
 const SidebarHeader = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'div'>
@@ -290,7 +271,10 @@ const SidebarHeader = React.forwardRef<
     <div
       ref={ref}
       data-sidebar="header"
-      className={cn('flex flex-col gap-2 p-2', className)}
+      className={cn(
+        'flex flex-col items-center justify-center gap-2 p-2',
+        className
+      )}
       {...props}
     />
   );
@@ -329,31 +313,18 @@ SidebarSeparator.displayName = 'SidebarSeparator';
 
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<'div'> & {
-    label?: string | React.ReactNode;
-    action?: React.ReactNode;
-  }
->(({ className, label, action, children, ...props }, ref) => {
+  React.ComponentProps<'div'>
+>(({ className, children, ...props }, ref) => {
   return (
     <div
       ref={ref}
       data-sidebar="content"
       className={cn(
-        'flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden',
+        'flex min-h-0 flex-1 flex-col items-center gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden',
         className
       )}
       {...props}
     >
-      {(label || action) && (
-        <div className="flex items-center justify-between p-2">
-          {label && (
-            <div className="text-xs font-medium text-sidebar-foreground/70">
-              {label}
-            </div>
-          )}
-          {action}
-        </div>
-      )}
       {children}
     </div>
   );
@@ -367,7 +338,10 @@ const SidebarMenu = React.forwardRef<
   <ul
     ref={ref}
     data-sidebar="menu"
-    className={cn('flex w-full min-w-0 flex-col gap-1 p-2', className)}
+    className={cn(
+      'flex w-full min-w-0 flex-col items-center gap-1 p-2',
+      className
+    )}
     {...props}
   />
 ));
@@ -395,6 +369,7 @@ const SidebarMenuItem = React.forwardRef<
     badge?: React.ReactNode;
     isActive?: boolean;
     variant?: 'default' | 'sub';
+    action?: () => void;
   }
 >(
   (
@@ -405,6 +380,8 @@ const SidebarMenuItem = React.forwardRef<
       badge,
       isActive,
       variant = 'default',
+      action,
+      onClick,
       ...props
     },
     ref
@@ -420,6 +397,10 @@ const SidebarMenuItem = React.forwardRef<
             'bg-sidebar-accent font-medium text-sidebar-accent-foreground',
           className
         )}
+        onClick={(event) => {
+          onClick?.(event);
+          action?.();
+        }}
         {...props}
       >
         {icon}
@@ -436,7 +417,6 @@ export {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarInput,
   SidebarInset,
   SidebarMenu,
   SidebarMenuItem,
