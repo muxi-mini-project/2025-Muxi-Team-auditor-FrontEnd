@@ -369,7 +369,7 @@ const SidebarMenuItem = React.forwardRef<
     badge?: React.ReactNode;
     isActive?: boolean;
     variant?: 'default' | 'sub';
-    action?: () => void;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   }
 >(
   (
@@ -380,7 +380,6 @@ const SidebarMenuItem = React.forwardRef<
       badge,
       isActive,
       variant = 'default',
-      action,
       onClick,
       ...props
     },
@@ -399,7 +398,6 @@ const SidebarMenuItem = React.forwardRef<
         )}
         onClick={(event) => {
           onClick?.(event);
-          action?.();
         }}
         {...props}
       >

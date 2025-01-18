@@ -8,7 +8,22 @@ import {
 } from '@/components/Sidebar';
 import { cn } from '@/utils/style';
 import { ComponentProps, ElementRef, forwardRef } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+const projects = [
+  {
+    name: '华师匣子',
+    path: '/ccnubox',
+  },
+  {
+    name: '木犀课栈',
+    path: '/kstack',
+  },
+  {
+    name: '茶馆',
+    path: '/forum',
+  },
+];
 
 const ProjectItem = forwardRef<
   ElementRef<typeof SidebarMenuItem>,
@@ -33,6 +48,7 @@ const ProjectItem = forwardRef<
 ProjectItem.displayName = 'ProjectItem';
 
 export function AppSidebar() {
+  const navigate = useNavigate();
   return (
     <Sidebar className="bg-[#ffffff]">
       <SidebarHeader className="h-16 flex flex-row items-center justify-center">
@@ -41,9 +57,15 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu>
-          <ProjectItem path="/" action={() => alert('华师匣子')}>
-            华师匣子
-          </ProjectItem>
+          {projects.map((project) => (
+            <ProjectItem
+              key={project.path}
+              path={project.path}
+              onClick={() => navigate(project.path)}
+            >
+              {project.name}
+            </ProjectItem>
+          ))}
         </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>Footer</SidebarFooter>
