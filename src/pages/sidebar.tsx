@@ -32,7 +32,7 @@ const ProjectItem = forwardRef<
   }
 >(({ className, path = '/', ...props }, ref) => {
   const pwd = useLocation().pathname;
-  const isActive = pwd === path;
+  const isActive = pwd.startsWith(path);
   return (
     <SidebarMenuItem
       ref={ref}

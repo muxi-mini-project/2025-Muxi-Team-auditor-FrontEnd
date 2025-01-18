@@ -7,9 +7,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider className="bg-[#FAF9F8]">
       <AppSidebar />
-      <main className="w-full">
+      <main className="w-full grid grid-rows-[4rem,auto]">
         <Header menu={<SidebarTrigger className="size-10" />} />
-        {children}
+        <div className="h-full flex justify-center items-center">
+          {children}
+        </div>
       </main>
     </SidebarProvider>
   );
