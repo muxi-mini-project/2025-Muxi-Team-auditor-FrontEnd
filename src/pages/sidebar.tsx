@@ -1,3 +1,4 @@
+import { LargeToggle } from '@/components/CrazyToggle';
 import {
   Sidebar,
   SidebarContent,
@@ -68,7 +69,9 @@ export function AppSidebar() {
           ))}
         </SidebarMenu>
       </SidebarContent>
-      <SidebarFooter>Footer</SidebarFooter>
+      <SidebarFooter className="h-16 flex flex-row items-center justify-start px-6">
+        <LargeToggle></LargeToggle>
+      </SidebarFooter>
     </Sidebar>
   );
 }

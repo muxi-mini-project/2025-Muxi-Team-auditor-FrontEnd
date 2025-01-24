@@ -1,10 +1,16 @@
+import useRouteStore from '@/store/useRouteStore';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 export default function ProjectPage() {
   const { project } = useParams();
-  if (project != undefined) {
-    return <div>{project}</div>;
-  } else {
-    return <div>404</div>;
-  }
+  const { setProject } = useRouteStore();
+
+  useEffect(() => {
+    if (project !== undefined) {
+      setProject(project);
+    }
+  }, [project, setProject]);
+
+  return <>{project}</>;
 }
