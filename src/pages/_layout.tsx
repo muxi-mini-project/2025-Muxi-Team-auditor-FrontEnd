@@ -1,6 +1,6 @@
 import { SidebarProvider, SidebarTrigger } from '@/components/Sidebar';
-import { AppSidebar } from '@/pages/sidebar';
-import Header from '@/pages/header';
+import { AppSidebar } from '@/pages/_sidebar';
+import Header from '@/pages/_header';
 import { ReactNode } from 'react';
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -9,7 +9,7 @@ import {
 } from '@/components/Sidebar';
 import { cn } from '@/utils/style';
 import { ComponentProps, ElementRef, forwardRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const projects = [
   {
@@ -52,9 +52,11 @@ export function AppSidebar() {
   const navigate = useNavigate();
   return (
     <Sidebar className="bg-[#ffffff]">
-      <SidebarHeader className="h-16 flex flex-row items-center justify-center">
-        <img src="/favicon.png" alt="logo" className="w-8 h-8" />
-        <span className="text-lg font-bold">MUXI AUDITOR</span>
+      <SidebarHeader className="h-16">
+        <Link to="/" className="flex flex-row items-center justify-center">
+          <img src="/favicon.png" alt="logo" className="w-8 h-8" />
+          <span className="text-lg font-bold">MUXI AUDITOR</span>
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu>
