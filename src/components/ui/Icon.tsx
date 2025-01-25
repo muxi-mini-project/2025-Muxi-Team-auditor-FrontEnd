@@ -1,14 +1,14 @@
 import { ReactElement } from 'react';
-import Check from '@/assets/check.svg?react';
-import Circle from '@/assets/circle.svg?react';
-import Cross from '@/assets/cross.svg?react';
-import More from '@/assets/more.svg?react';
-import Menu from '@/assets/menu.svg?react';
-import Search from '@/assets/search.svg?react';
-import Member from '@/assets/member.svg?react';
-import Settings from '@/assets/settings.svg?react';
-import ChevronLeft from '@/assets/chevron-left.svg?react';
-import ChevronRight from '@/assets/chevron-right.svg?react';
+import Check from '@/assets/icons/check.svg?react';
+import Circle from '@/assets/icons/circle.svg?react';
+import Cross from '@/assets/icons/cross.svg?react';
+import More from '@/assets/icons/more.svg?react';
+import Menu from '@/assets/icons/menu.svg?react';
+import Search from '@/assets/icons/search.svg?react';
+import Member from '@/assets/icons/member.svg?react';
+import Settings from '@/assets/icons/settings.svg?react';
+import ChevronLeft from '@/assets/icons/chevron-left.svg?react';
+import ChevronRight from '@/assets/icons/chevron-right.svg?react';
 import * as React from 'react';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {

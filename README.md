@@ -58,6 +58,46 @@
 
 `components` 下存放的是项目特有的自定义组件，同样使用 Radix UI 无头组件库构建，但因其仅作为设计稿实现产物，故不具有参考价值。
 
+### Icon 组件
+
+#### 使用
+
+```tsx
+<Icon name="<icon_name>"></Icon>
+```
+
+`icon_name` 取值：参考 `@/assets/icons` 下 svg 文件名
+
+#### 新增
+
+- 在 `@/assets/icons` 下放入图标 svg
+
+- 在`@/components/ui/Icon.tsx` 文件中导入并注册图标：
+
+  ```tsx
+  import IconName from '@/assets/icons/icon-name.svg'; // 图标组件以大驼峰格式命名
+  
+  export interface IconProps extends React.SVGProps<SVGSVGElement> {
+    name:
+      ...
+      | 'icon-name' // icon-name 以 kebab-case 命名
+      | string;
+  }
+  
+  
+  const Icon = React.forwardRef<SVGSVGElement, IconProps>(
+    ({ name, ...svgProps }, ref) => {
+      const icons: Record<IconProps['name'], ReactElement> = {
+          ...
+          'icon-name': <IconName {...svgProps} ref={ref}></IconName> // 此处建立 icon-name 与图标组件的对应关系
+      };
+      return icons[name];
+    }
+  );
+  
+  export { Icon };
+  ```
+
 ## 迭代点 *TODOS*
 
 项目目前还比较早期，还有诸多需要完善的部分，这里列出几个目前难以优化但后期可以尝试的大方向：
