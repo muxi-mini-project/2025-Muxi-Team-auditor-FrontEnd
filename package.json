@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,html,json}\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,6 +21,9 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
     "react": "^18.3.1",
     "react-day-picker": "^8.7.1",
     "react-dom": "^18.3.1",

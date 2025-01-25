@@ -2,7 +2,7 @@
 
 为木犀产品提供审核后台服务接入
 
-## 项目架构 *Structure*
+## 项目架构 _Structure_
 
 | 工具              | 用途                   |
 | ----------------- | ---------------------- |
@@ -13,7 +13,7 @@
 | Pont              | 接入后端接口           |
 | Zustand           | 提供状态管理           |
 
-## 开发 *Development*
+## 开发 _Development_
 
 ```json
   "scripts": {
@@ -24,13 +24,13 @@
   },
 ```
 
-## 路由 *Routes*
+## 路由 _Routes_
 
 本项目路由由 `vite-plugin-pages` 提供，根据 `src/pages` 下的文件结构生成路由路径。
 
 > TODO: show off routes after impl pages
 
-## 组件 *Components*
+## 组件 _Components_
 
 本项目组件参考 [shadcn/ui](https://ui.shadcn.com/)，使用 [Radix UI](https://www.radix-ui.com/) 作为无头组件库开发。
 
@@ -76,15 +76,15 @@
 
   ```tsx
   import IconName from '@/assets/icons/icon-name.svg'; // 图标组件以大驼峰格式命名
-  
+
   export interface IconProps extends React.SVGProps<SVGSVGElement> {
     name:
       ...
       | 'icon-name' // icon-name 以 kebab-case 命名
       | string;
   }
-  
-  
+
+
   const Icon = React.forwardRef<SVGSVGElement, IconProps>(
     ({ name, ...svgProps }, ref) => {
       const icons: Record<IconProps['name'], ReactElement> = {
@@ -94,11 +94,11 @@
       return icons[name];
     }
   );
-  
+
   export { Icon };
   ```
 
-## 迭代点 *TODOS*
+## 迭代点 _TODOS_
 
 项目目前还比较早期，还有诸多需要完善的部分，这里列出几个目前难以优化但后期可以尝试的大方向：
 
