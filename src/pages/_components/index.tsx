@@ -8,6 +8,8 @@ import { LargeToggle, SmallToggle } from '@/components/CrazyToggle';
 
 import { TestPagination } from './TestPagination';
 import { TestCalendar } from './TestCalendar';
+import { Input } from '@/components/ui/Input';
+import { SearchInput } from '@/components/SearchInput';
 
 export default function Page() {
   return (
@@ -33,6 +35,12 @@ export default function Page() {
         <ImageButton direction="next"></ImageButton>
         <LargeToggle></LargeToggle>
         <SmallToggle></SmallToggle>
+        <Input className="w-32"></Input>
+        <SearchInput
+          placeholder="Search..."
+          containerClassName="w-64"
+          action={(value) => alert(value)}
+        />
       </div>
       <TestPagination></TestPagination>
       <TestCalendar></TestCalendar>
