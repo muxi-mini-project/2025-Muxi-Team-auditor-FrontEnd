@@ -84,7 +84,6 @@
       | string;
   }
 
-
   const Icon = React.forwardRef<SVGSVGElement, IconProps>(
     ({ name, ...svgProps }, ref) => {
       const icons: Record<IconProps['name'], ReactElement> = {
