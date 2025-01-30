@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 # . "$(dirname "$0")/h"
 
-pnpm lint && git add .
+pnpm lint && pnpm format && git add .

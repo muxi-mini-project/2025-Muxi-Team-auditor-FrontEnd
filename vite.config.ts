@@ -6,7 +6,13 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), Pages(), SVGR()],
+  plugins: [
+    react(),
+    Pages({
+      exclude: ['**/_*.tsx'],
+    }),
+    SVGR(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
