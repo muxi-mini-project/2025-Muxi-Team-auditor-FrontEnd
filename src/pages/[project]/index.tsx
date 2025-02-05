@@ -103,22 +103,22 @@ const EntryList = () => {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>全选</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>详情</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>时间</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>审核人</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>标签</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>状态</span>
           </TableHead>
         </TableRow>

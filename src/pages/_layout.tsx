@@ -119,8 +119,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <AppSidebar />
       <main className="w-full grid grid-rows-[4rem,auto]">
         <Header menu={<SidebarTrigger className="size-10" />} />
-        <div className="h-full flex justify-center items-center px-4">
-          <div className="w-full">{children}</div>
+        <div className="h-full flex justify-center items-center p-8">
+          {children}
         </div>
       </main>
     </SidebarProvider>
