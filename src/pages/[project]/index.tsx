@@ -132,7 +132,7 @@ const EntryList = () => {
             <TableCell className="text-center">
               <div className="flex flex-col gap-1">
                 <div className="font-medium">{item.title}</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   {item.description}
                 </div>
               </div>
@@ -140,7 +140,7 @@ const EntryList = () => {
             <TableCell className="text-center">{item.time}</TableCell>
             <TableCell className="text-center">{item.reviewer}</TableCell>
             <TableCell className="text-center">
-              <div className="flex justify-center items-center">
+              <div className="flex items-center justify-center">
                 <TagCheckbox>{item.tag}</TagCheckbox>
               </div>
             </TableCell>

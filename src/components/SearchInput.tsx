@@ -30,7 +30,7 @@ const SearchInput = forwardRef<
         ref={ref}
         type="text"
         className={cn(
-          'h-10 w-full rounded-full border border-[#FFD596] bg-[#FFF8ED] pl-10 pr-3 text-sm text-[#8F8D88] ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          'placeholder:text-muted-foreground focus-visible:ring-ring h-10 w-full rounded-full border border-[#FFD596] bg-[#FFF8ED] pl-10 pr-3 text-sm text-[#8F8D88] ring-offset-background focus-visible:outline-none focus-visible:ring-2',
           className
         )}
         value={value}

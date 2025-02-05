@@ -4,13 +4,13 @@ import { Card, CardContent, CardFooter } from '@/components/ui/Card';
 
 export default function EntryPage() {
   return (
-    <div className="flex flex-col gap-8 h-full">
+    <div className="flex h-full flex-col gap-8">
       {/* 标题区域 */}
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">
           为什么我的匣子老闪退？为什么我的匣子老闪退？为什么我的匣子老闪退？为什么我的匣子老闪退？
         </h1>
-        <div className="flex gap-2 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex gap-2 text-sm">
           <span>发布人：旅游的青蛙</span>
           <span>发布日期：2025.1.12</span>
         </div>
@@ -19,7 +19,7 @@ export default function EntryPage() {
       {/* 内容卡片 - 使用 flex-1 使其占满剩余空间 */}
       <Card className="flex-1">
         <CardContent className="pt-6">
-          <div className="flex gap-6 h-full">
+          <div className="flex h-full gap-6">
             <div className="flex-1">
               <div className="whitespace-pre-wrap">
                 我的匣子老闪退，为什么？ 点进去一会儿就会卡死。

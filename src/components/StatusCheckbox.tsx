@@ -44,7 +44,7 @@ const StatusCheckbox = React.forwardRef<
     className={cn(statusCheckboxVariants({ variant, className }))}
     {...props}
   >
-    <Icon className="w-5 h-5" name={statusIcons[variant || 'done']}></Icon>
+    <Icon className="h-5 w-5" name={statusIcons[variant || 'done']}></Icon>
   </CheckboxPrimitive.Root>
 ));
 StatusCheckbox.displayName = CheckboxPrimitive.Root.displayName;

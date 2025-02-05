@@ -16,7 +16,7 @@ export function TestCalendar() {
         mode="range"
         selected={date}
         onSelect={setDate}
-        className="rounded-md w-80 p-6"
+        className="w-80 rounded-md p-6"
       />
     </div>
   );

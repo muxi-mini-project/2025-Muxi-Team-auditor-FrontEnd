@@ -14,7 +14,7 @@ import { SearchInput } from '@/components/SearchInput';
 export default function Page() {
   return (
     <>
-      <div className="flex flex-wrap gap-4 m-4">
+      <div className="m-4 flex flex-wrap gap-4">
         <Button>DEFAULT</Button>
         <Button variant="pass">PASS</Button>
         <Button variant="pending">PENDING</Button>

@@ -12,7 +12,7 @@ const ImageButton = React.forwardRef<HTMLButtonElement, ImageButtonProps>(
     return (
       <button
         className={cn(
-          'size-7 rounded bg-[#EBEAEA] inline-flex items-center justify-center',
+          'inline-flex size-7 items-center justify-center rounded bg-[#EBEAEA]',
           className
         )}
         ref={ref}
