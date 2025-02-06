@@ -119,7 +119,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <AppSidebar />
       <main className="grid w-full grid-rows-[4rem,auto]">
         <Header menu={<SidebarTrigger className="size-10" />} />
-        <div className="mx-auto flex h-full max-w-[1200px] items-center justify-center p-8">
+        <div className="mx-auto flex h-full w-full max-w-[1200px] items-center justify-center p-8">
           {children}
         </div>
       </main>

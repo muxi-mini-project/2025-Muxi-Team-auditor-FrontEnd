@@ -1,5 +1,5 @@
-import { TagCheckbox } from '@/components/TagCheckbox';
-import { Button, ButtonProps } from '@/components/ui/Button';
+import { Status, StatusProps } from '@/components/Status';
+import { Tag } from '@/components/Tag';
 import { Checkbox } from '@/components/ui/Checkbox';
 import {
   Table,
@@ -141,13 +141,13 @@ const EntryList = () => {
             <TableCell className="text-center">{item.reviewer}</TableCell>
             <TableCell className="text-center">
               <div className="flex items-center justify-center">
-                <TagCheckbox>{item.tag}</TagCheckbox>
+                <Tag>{item.tag}</Tag>
               </div>
             </TableCell>
             <TableCell className="text-center">
-              <Button variant={item.status as ButtonProps['variant']}>
+              <Status variant={item.status as StatusProps['variant']}>
                 状态
-              </Button>
+              </Status>
             </TableCell>
           </TableRow>
         ))}

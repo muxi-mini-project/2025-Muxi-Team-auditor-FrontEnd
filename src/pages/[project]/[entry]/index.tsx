@@ -1,5 +1,5 @@
-import { TagCheckbox } from '@/components/TagCheckbox';
-import { Button } from '@/components/ui/Button';
+import { TagCheckbox } from '@/components/Tag';
+import { StatusButton } from '@/components/Status';
 import { Card, CardContent, CardFooter } from '@/components/ui/Card';
 
 export default function EntryPage() {
@@ -45,13 +45,13 @@ export default function EntryPage() {
 
       {/* 底部按钮 */}
       <div className="flex justify-between">
-        <Button variant="pagination">◀ PREVIOUS</Button>
+        <StatusButton variant="pagination">◀ PREVIOUS</StatusButton>
         <div className="flex gap-2">
-          <Button variant="ai">AI审核</Button>
-          <Button variant="reject">REJECT</Button>
-          <Button variant="pass">PASS</Button>
+          <StatusButton variant="ai">AI审核</StatusButton>
+          <StatusButton variant="reject">REJECT</StatusButton>
+          <StatusButton variant="pass">PASS</StatusButton>
         </div>
-        <Button variant="pagination">NEXT ▶</Button>
+        <StatusButton variant="pagination">NEXT ▶</StatusButton>
       </div>
     </div>
   );
