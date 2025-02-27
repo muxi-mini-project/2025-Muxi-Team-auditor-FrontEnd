@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/Button';
+// import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
-import { StatusCheckbox } from '@/components/StatusCheckbox';
-import { TagCheckbox } from '@/components/TagCheckbox';
+import { StatusButton, StatusCheckbox } from '@/components/Status';
+import { Tag, TagCheckbox } from '@/components/Tag';
 import { Toggle } from '@/components/ui/Toggle';
 import { ImageButton } from '@/components/ImageButton';
 import { LargeToggle, SmallToggle } from '@/components/CrazyToggle';
@@ -14,21 +14,21 @@ import { SearchInput } from '@/components/SearchInput';
 export default function Page() {
   return (
     <>
-      <div className="flex flex-wrap gap-4 m-4">
-        <Button>DEFAULT</Button>
-        <Button variant="pass">PASS</Button>
-        <Button variant="pending">PENDING</Button>
-        <Button variant="reject">REJECT</Button>
-        <Button variant="confirm">CONFIRM</Button>
-        <Button variant="complete">COMPLETE</Button>
-        <Button variant="cancel">CANCEL</Button>
-        <Button variant="pagination">◀ PREV</Button>
-        <Button variant="pagination">NEXT ▶</Button>
-        <Button variant="ai">AI终审</Button>
+      <div className="m-4 flex flex-wrap gap-4">
+        <StatusButton variant="pass">PASS</StatusButton>
+        <StatusButton variant="pending">PENDING</StatusButton>
+        <StatusButton variant="reject">REJECT</StatusButton>
+        <StatusButton variant="confirm">CONFIRM</StatusButton>
+        <StatusButton variant="complete">COMPLETE</StatusButton>
+        <StatusButton variant="cancel">CANCEL</StatusButton>
+        <StatusButton variant="pagination">◀ PREV</StatusButton>
+        <StatusButton variant="pagination">NEXT ▶</StatusButton>
+        <StatusButton variant="ai">AI终审</StatusButton>
         <StatusCheckbox variant="done"></StatusCheckbox>
         <StatusCheckbox variant="pending"></StatusCheckbox>
         <StatusCheckbox variant="reject"></StatusCheckbox>
         <Toggle></Toggle>
+        <Tag>Tag</Tag>
         <TagCheckbox>Tag</TagCheckbox>
         <Checkbox></Checkbox>
         <ImageButton direction="prev"></ImageButton>

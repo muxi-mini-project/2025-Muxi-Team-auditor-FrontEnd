@@ -1,5 +1,5 @@
-import { TagCheckbox } from '@/components/TagCheckbox';
-import { Button, ButtonProps } from '@/components/ui/Button';
+import { Status, StatusProps } from '@/components/Status';
+import { Tag } from '@/components/Tag';
 import { Checkbox } from '@/components/ui/Checkbox';
 import {
   Table,
@@ -103,22 +103,22 @@ const EntryList = () => {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>全选</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>详情</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>时间</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>审核人</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>标签</span>
           </TableHead>
-          <TableHead className="text-center">
+          <TableHead className="text-center font-bold text-foreground">
             <span>状态</span>
           </TableHead>
         </TableRow>
@@ -132,7 +132,7 @@ const EntryList = () => {
             <TableCell className="text-center">
               <div className="flex flex-col gap-1">
                 <div className="font-medium">{item.title}</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   {item.description}
                 </div>
               </div>
@@ -140,14 +140,14 @@ const EntryList = () => {
             <TableCell className="text-center">{item.time}</TableCell>
             <TableCell className="text-center">{item.reviewer}</TableCell>
             <TableCell className="text-center">
-              <div className="flex justify-center items-center">
-                <TagCheckbox>{item.tag}</TagCheckbox>
+              <div className="flex items-center justify-center">
+                <Tag>{item.tag}</Tag>
               </div>
             </TableCell>
             <TableCell className="text-center">
-              <Button variant={item.status as ButtonProps['variant']}>
+              <Status variant={item.status as StatusProps['variant']}>
                 状态
-              </Button>
+              </Status>
             </TableCell>
           </TableRow>
         ))}

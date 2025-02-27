@@ -18,7 +18,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn('p-3 bg-[#FFF8ED] transition-all', className)}
+      className={cn('bg-[#FFF8ED] p-3 transition-all', className)}
       classNames={{
         // TODO: sort all the classes and improve animation
         month: 'space-y-4',

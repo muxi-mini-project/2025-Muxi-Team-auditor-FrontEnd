@@ -31,7 +31,7 @@ const ProjectItem = forwardRef<
     <SidebarMenuItem
       ref={ref}
       className={cn(
-        'hover:bg-[#FFE1B1] active:bg-[#FFD596] w-48 h-12 text-md font-semibold',
+        'text-md h-12 w-48 font-semibold hover:bg-[#FFE1B1] active:bg-[#FFD596]',
         isActive && 'bg-[#FFD596]',
         className
       )}
@@ -48,25 +48,25 @@ function Header({ menu }: { menu: ReactNode }) {
   const { project } = useRouteStore();
 
   return (
-    <div className="grid grid-cols-[4rem,20rem,auto,6rem,12rem] place-items-center w-full h-16 bg-[#FFFFFF]">
+    <div className="grid h-16 w-full grid-cols-[4rem,20rem,auto,6rem,12rem] place-items-center bg-[#FFFFFF]">
       {menu}
       <SearchInput className="w-72" />
       <div></div>
-      <div className="w-full h-full grid grid-cols-2 place-items-center">
+      <div className="grid h-full w-full grid-cols-2 place-items-center">
         <Icon name="member" />
         <Icon
           name="settings"
           onClick={() => navigate(`/${project}/settings`)}
         />
       </div>
-      <div className="w-full h-full grid grid-cols-[1fr,3fr] place-items-center">
+      <div className="grid h-full w-full grid-cols-[1fr,3fr] place-items-center">
         <Avatar className="size-10">
           <AvatarImage src="https://www.booling.cn/assets/avatar-bf4f5557.webp" />
           <AvatarFallback>瑜伽</AvatarFallback>
         </Avatar>
-        <div className="h-full w-full flex flex-col justify-center items-start p-2">
+        <div className="flex h-full w-full flex-col items-start justify-center p-2">
           <div className="text-md font-bold">{name}</div>
-          <div className="text-[0.8rem] text-muted-foreground">
+          <div className="text-muted-foreground text-[0.8rem]">
             非常擅长瑜伽
           </div>
         </div>
@@ -88,7 +88,7 @@ function AppSidebar() {
     <Sidebar className="bg-[#ffffff]">
       <SidebarHeader className="h-16">
         <Link to="/" className="flex flex-row items-center justify-center">
-          <img src="/favicon.png" alt="logo" className="w-8 h-8" />
+          <img src="/favicon.png" alt="logo" className="h-8 w-8" />
           <span className="text-lg font-bold">MUXI AUDITOR</span>
         </Link>
       </SidebarHeader>
@@ -105,7 +105,7 @@ function AppSidebar() {
           ))}
         </SidebarMenu>
       </SidebarContent>
-      <SidebarFooter className="h-16 flex flex-row items-center justify-start px-6">
+      <SidebarFooter className="flex h-16 flex-row items-center justify-start px-6">
         <LargeToggle></LargeToggle>
       </SidebarFooter>
     </Sidebar>
@@ -117,10 +117,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider className="bg-[#FAF9F8]">
       <AppSidebar />
-      <main className="w-full grid grid-rows-[4rem,auto]">
+      <main className="grid w-full grid-rows-[4rem,auto]">
         <Header menu={<SidebarTrigger className="size-10" />} />
-        <div className="h-full flex justify-center items-center px-4">
-          <div className="w-full">{children}</div>
+        <div className="mx-auto flex h-full w-full max-w-[1200px] items-center justify-center p-8">
+          {children}
         </div>
       </main>
     </SidebarProvider>
