@@ -44,7 +44,7 @@ ProjectItem.displayName = 'ProjectItem';
 // Header 组件
 function Header({ menu }: { menu: ReactNode }) {
   const navigate = useNavigate();
-  const { name } = useUserStore();
+  const { user } = useUserStore();
   const { project } = useRouteStore();
 
   return (
@@ -61,11 +61,12 @@ function Header({ menu }: { menu: ReactNode }) {
       </div>
       <div className="grid h-full w-full grid-cols-[1fr,3fr] place-items-center">
         <Avatar className="size-10">
-          <AvatarImage src="https://www.booling.cn/assets/avatar-bf4f5557.webp" />
+          {/* <AvatarImage src="https://www.booling.cn/assets/avatar-bf4f5557.webp" /> */}
+          <AvatarImage src={user?.avatar} />
           <AvatarFallback>瑜伽</AvatarFallback>
         </Avatar>
         <div className="flex h-full w-full flex-col items-start justify-center p-2">
-          <div className="text-md font-bold">{name}</div>
+          <div className="text-md font-bold">{user?.name}</div>
           <div className="text-muted-foreground text-[0.8rem]">
             非常擅长瑜伽
           </div>
